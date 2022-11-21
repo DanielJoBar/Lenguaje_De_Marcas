@@ -1,0 +1,32 @@
+/****************************************************/
+/*  Web del Romanticismo - Hoja de estilo de poema  */
+/*  Autora : Daniel Jódar Barbero                   */
+/*  Version 1.0 - 07/11/2022                        */
+/****************************************************/
+
+
+/************** Estilo general **********************/
+
+@font-face {
+    font-family:Escritura;
+    src: url('../fonts/Oswald-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family:Text;
+    src: url('../fonts/Hay\ Darling.ttf');
+}
+body{
+    font-family:Escritura;
+    font-size:1em;
+    background-image: url('../images/ImagenPirata.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    background-position:40%;
+}
+#wrapper{
+    color:rgb(253,226,208);
+    margin-left: 20%;
+    height:100vh;
+
+}
