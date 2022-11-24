@@ -14,15 +14,26 @@
     font-family:url('../fonts/Oswald-VariableFont_wght.ttf') ;
     src: url();
 }
-body{background-color:#8E8583 ;
+body{background-color:#9e847e ;
 }
 #wrapper{background-color: azure;
     width:80%;
     margin:auto;
 
 }
+/***************************************SECCIONES DE TÍTULOS*********************************************/
+
+.titulo-seccion{
+    font-family: titulo;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 40px 0;
+    color: brown;
+    background-color: #d1bcaa;
+}
+
 /**********HERO SECTION********/
-/*#hero{
+#hero{
     background-image: url('../images/wanderer.jpg');
     height: 100vh;
     background-repeat:no-repeat;
@@ -30,9 +41,9 @@ body{background-color:#8E8583 ;
     background-position:55%;
     text-align: center;
     padding-top:5px;
-    font-size: 3.5rem; /* agrando porque por el tipo de letra se achica 
+    font-size: 3.5rem; /* agrando porque por el tipo de letra se achica */
     
-}*/
+}
 #titulo{
     font-family:url('../fonts/Oswald-VariableFont_wght.ttf');
     background-color: rgb(255, 255, 255,0.25);
@@ -43,24 +54,18 @@ body{background-color:#8E8583 ;
     padding:20px;
     margin-top: 20%;
     font-size:2rem;
+    color:rgb(88, 1, 1);
 }
-@media only screen and(width<=900px){
-#titulo{width:80%;}
-}
-@media screen and(width<=600px){
-    #titulo{width:60%;}
-    #titulo3{transform: translate(-50%,-30%);}
-    
-}
+
 /*                      HERO SECTION V2                                 */
-#video{
+/*#video{
     position:center;
     
     width:100%;
     height:50%;
-    /*position: fixed;*/
+    /*position: fixed;
     position: relative;
-}
+}*/
 #titulo2{
     position: relative;/*    el titulo esta al mismo nivel que el video no dentro*/
     top: -205px;
@@ -102,4 +107,42 @@ body{background-color:#8E8583 ;
     top:50%;
     left: 50%;
     transform:translate(-50%,-50%);
+}
+/***************************************SECCIÓN INTRODUCCIÓN*********************************************/
+#ideas{background-color: #BEAEA0;}
+/*Contenedor GRID*/
+.grid2{
+    display:grid;
+    grid-template-columns:50% 50%; /* se pone un espacio y un auto o porcentaje por columna ,ej: si pongo 4 , se haran 4 columnas*/
+}
+/* Que corra el aire(Mirar el box-sizing arriba )*/
+.texto{
+    padding: 20px;
+}
+/*selector combinado (img DENTRO de .col2)*/
+.col2 img{
+    width:100%;
+    height:100%;
+}
+
+
+/***************************************SECCIÓN IDEAS*********************************************/
+
+
+
+/***************************************MEDIA QUERIES*********************************************/
+@media only screen and(width<=1000px) {
+    #wrapper{width: 100%;
+            font-size:2rem;
+            }
+    .grid2{grid-template-columns: 100%;}/*el grid pasa a ser de 1 coolumna en tablets*/
+}
+
+@media only screen and(width<=900px){
+    #titulo{width:80%;}
+}
+@media screen and(width<=600px){
+        #titulo{width:60%;}
+        #titulo3{transform: translate(-50%,-30%);}
+        
 }
