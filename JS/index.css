@@ -1,0 +1,232 @@
+/****************************************************/
+/*  Web del Romanticismo - Hoja de estilo de autores*/
+/*  Autora : Daniel Jódar Barbero                   */
+/*  Version 1.0 - 24/10/2022                        */
+/****************************************************/
+
+
+/************** Estilo general **********************/
+@font-face {
+    font-family:url('../fonts/Kayonest\ Free\ Trial.ttf') ;
+    src: url();
+}
+@font-face {
+    font-family:url('../fonts/Oswald-VariableFont_wght.ttf') ;
+    src: url();
+}
+body{background-color:#9e847e ;
+}
+#wrapper{background-color: azure;
+    width:80%;
+    margin:auto;
+
+}
+/***************************************SECCIONES DE TÍTULOS*********************************************/
+
+.titulo-seccion{
+    font-family: titulo;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 40px 0;
+    color: brown;
+    background-color: #d1bcaa;
+}
+
+/**********HERO SECTION********/
+#hero{
+    background-image: url('../images/wanderer.jpg');
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:55%;
+    text-align: center;
+    padding-top:5px;
+    font-size: 3.5rem; /* agrando porque por el tipo de letra se achica */
+    
+}
+#titulo{
+    font-family:url('../fonts/Oswald-VariableFont_wght.ttf');
+    background-color: rgb(255, 255, 255,0.25);
+    backdrop-filter:blur(2px);/* Le aplica un filtro a lo que esta atras*/
+    border-radius: 10px;
+    width:50%;
+    margin: auto;
+    padding:20px;
+    margin-top: 20%;
+    font-size:2rem;
+    color:rgb(88, 1, 1);
+}
+
+/*                      HERO SECTION V2                                 */
+/*#video{
+    position:center;
+    
+    width:100%;
+    height:50%;
+    /*position: fixed;
+    position: relative;
+}*/
+#titulo2{
+    position: relative;/*    el titulo esta al mismo nivel que el video no dentro*/
+    top: -205px;
+    background: black;
+    color: aliceblue;
+    width: 100%;
+}
+/*                      HERO SECTION V3                                 */
+#titulo3{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-family: titulo;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+#hero3{/*background-color: #0099FF;*/
+    background-image: url('../images/Fondo.jpg');
+    height: 10vh;
+    position:absolute;
+}
+#hero4{
+    background-image:url('../images/haikei_imagen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+}
+#titulo4{
+    position: absolute;
+    font-size: 3.8vw;
+    font-weight: bold;
+    backdrop-filter:blur(2px);
+    font-family:url('../fonts/Hay\ Darling.ttf');
+    background-color: rgb(255, 255, 255,0.5);
+    width: 30%;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+/***************************************SECCIÓN INTRODUCCIÓN*********************************************/
+#ideas{background-color: #BEAEA0;}
+/*Contenedor GRID*/
+.grid2{
+    display:grid;
+    grid-template-columns:50% 50%; /* se pone un espacio y un auto o porcentaje por columna ,ej: si pongo 4 , se haran 4 columnas*/
+}
+/* Que corra el aire(Mirar el box-sizing arriba )*/
+.texto{
+    padding: 10%;
+    font-size:1.1rem;
+}
+.texto li{
+    margin-bottom:8% ;
+}
+/*selector combinado (img DENTRO de .col2)*/
+.col2 img{
+    width:100%;
+    height:100%;
+}
+.grid4{
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%; /* se pone un espacio y un auto o porcentaje por columna ,ej: si pongo 4 , se haran 4 columnas*/
+}
+.grid3{
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+}
+footer{background-color: rgba(228, 224, 224, 0.76);}
+.col3{padding: 10%;
+    width: 80%;    
+}
+.col3 img{
+    width:80%;
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 50%;
+    text-align:center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.fa:hover{
+    opacity: 0.7;
+}
+.fa-facebook{
+    background-color: #3B5998;
+    color: white;
+}
+.col4{padding:10px;}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition:0.3s;
+    padding :5px; 
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container{
+    padding: 2% 5%;
+}
+.card img{
+    width: 90%;
+    filter: sepia();
+    opacity: 0.5;
+    transition: 1s;
+    padding: 10px;
+    border-radius: 40%;
+    
+}
+.card img:hover{
+    opacity: 1;
+}
+.card a{
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(97,97,97);
+    padding: 10px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius:5px;
+}
+.card a:hover{
+    background-color: rgb(68,68,68);
+    color: rgb(68,68,68);
+}
+/***************************************SECCIÓN IDEAS*********************************************/
+
+
+
+/***************************************MEDIA QUERIES*********************************************/
+@media only screen and (width<=800px) {
+    #wrapper{width: 100%;
+            font-size:2rem;
+            }
+            .texto li{
+                margin-bottom:5% ;
+            }
+            .grid4{grid-template-columns: 50% 50%;}
+            .grid2{grid-template-columns: 100%;}/*el grid pasa a ser de 1 coolumna en tablets*/
+            .dos{
+                margin-top:-20%;
+            }
+}
+@media screen and (width<=600px){
+        #titulo{width:80%;}
+        #titulo3{transform: translate(-50%,-30%);}
+        .grid4{grid-template-columns: 100%;}
+        .texto li{
+            margin-bottom:3% ;
+        }
+        .dos{
+            margin-top:-20%;
+        }
+        .col3 {
+            width:50%
+        }
+}
